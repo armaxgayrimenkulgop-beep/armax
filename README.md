@@ -89,8 +89,8 @@
       background: #fff;
     }
     .icon img {
-      width: 26px;
-      height: 26px;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       pointer-events: none;
     }
@@ -112,7 +112,7 @@
 
   <div class="header">
     <div class="logo-wrap">
-      <div class="logo">ARMAX</div>
+      <img src="images/armax-logo.png" alt="ARMAX Gayrimenkul" style="height:48px; display:block;" />
     </div>
   </div>
 
@@ -124,7 +124,7 @@
 
     <a class="link" href="https://armaxgayrimenkul.sahibinden.com/" target="_blank">
       <div class="link-left">
-        <div class="icon sahibinden"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Sahibinden.com_logo.svg" alt="Sahibinden" /></div>
+        <div class="icon sahibinden"><img src="images/sahibinden.png" alt="Sahibinden" /></div>
         <strong>Sahibinden</strong>
       </div>
       <div class="arrow">→</div>
@@ -132,7 +132,7 @@
 
     <a class="link" href="https://www.hepsiemlak.com/emlak-ofisi/armax-gayrimenkul-45672" target="_blank">
       <div class="link-left">
-        <div class="icon hepsi"><img src="https://seeklogo.com/images/H/hepsiemlak-logo-3E7E6E6D9A-seeklogo.com.png" alt="Hepsi Emlak" /></div>
+        <div class="icon hepsi"><img src="images/hepsiemlak.png" alt="Hepsi Emlak" /></div>
         <strong>Hepsi Emlak</strong>
       </div>
       <div class="arrow">→</div>
@@ -140,7 +140,7 @@
 
     <a class="link" href="https://www.emlakjet.com/emlak-ofisleri-detay/armax-gayrimenkul-183377" target="_blank">
       <div class="link-left">
-        <div class="icon emlakjet"><img src="https://seeklogo.com/images/E/emlakjet-logo-0C5F6A4A5B-seeklogo.com.png" alt="Emlakjet" /></div>
+        <div class="icon emlakjet"><img src="images/emlakjet.png" alt="Emlakjet" /></div>
         <strong>Emlak Jet</strong>
       </div>
       <div class="arrow">→</div>
@@ -150,7 +150,7 @@
 
     <a class="link" href="https://www.instagram.com/armaxgayrimenkul.gop/" target="_blank">
       <div class="link-left">
-        <div class="icon instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /></div>
+        <div class="icon instagram"><img src="images/instagram.png" alt="Instagram" /></div>
         <div>
           <strong>Instagram</strong><br />
           <small>Bizi Takip Edin</small>
