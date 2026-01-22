@@ -44,7 +44,7 @@
       bottom: -45px;
       transform: translateX(-50%);
       background: #ffffff;
-      padding: 18px 28px;
+      padding: 22px 38px;
       border-radius: 30px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
@@ -52,7 +52,7 @@
     .logo {
       background: #0a33ff;
       color: #ffffff;
-      padding: 20px 36px;
+      padding: 22px 38px;
       border-radius: 26px;
       font-weight: 700;
       font-size: 20px;
