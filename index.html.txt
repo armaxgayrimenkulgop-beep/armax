@@ -14,11 +14,17 @@
       background: #f5f7fa;
       color: #1f2937;
     }
-    .header {
-      background: #3b6ccf;
-      height: 220px;
-      position: relative;
-    }
+    .header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+}
     .logo-wrap {
       position: absolute;
       left: 50%;
@@ -111,10 +117,13 @@
 <body>
 
   <div class="header">
-    <div class="logo-wrap">
-      <div class="logo">ARMAX</div>
-    </div>
+  <div class="header-title">ARMAX GAYRİMENKUL</div>
+
+  <div class="logo-wrap">
+    <div class="logo">ARMAX</div>
   </div>
+</div>
+
 
   <div class="container">
     <h1>ARMAX GAYRİMENKUL</h1>
@@ -162,3 +171,4 @@
 
 </body>
 </html>
+
