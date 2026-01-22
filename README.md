@@ -17,49 +17,52 @@
       color: #1f2937;
     }
 
-    /* Mavi alan */
+    /* ===== HEADER ===== */
     .header {
       background: #3b6ccf;
       height: 220px;
       position: relative;
     }
 
-    /* ORTADAKİ YAZI */
     .header-title {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: #ffffff;
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 700;
       letter-spacing: 2px;
       text-align: center;
       width: 100%;
     }
 
+    /* ===== LOGO ===== */
     .logo-wrap {
       position: absolute;
       left: 50%;
       bottom: -45px;
       transform: translateX(-50%);
       background: #ffffff;
-      padding: 14px 22px;
-      border-radius: 28px;
+      padding: 18px 28px;
+      border-radius: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .logo {
       background: #0a33ff;
       color: #ffffff;
-      padding: 18px 30px;
-      border-radius: 24px;
+      padding: 20px 36px;
+      border-radius: 26px;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 20px;
+      letter-spacing: 1px;
     }
 
+    /* ===== CONTENT ===== */
     .container {
       max-width: 420px;
-      margin: 80px auto 40px;
+      margin: 90px auto 40px;
       padding: 0 16px;
     }
 
@@ -83,6 +86,7 @@
       margin: 24px 0;
     }
 
+    /* ===== LINKS ===== */
     .link {
       background: #ffffff;
       border-radius: 16px;
@@ -108,8 +112,8 @@
     }
 
     .icon {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -121,15 +125,13 @@
       width: 26px;
       height: 26px;
       object-fit: contain;
-      pointer-events: none;
     }
 
-    .sahibinden { background: #ffe600; color: #000000; }
+    .sahibinden { background: #ffe600; }
     .hepsi { background: #ffffff; }
     .emlakjet { background: #e6f7ec; }
     .instagram {
       background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-      color:#ffffff;
     }
 
     .arrow {
@@ -160,30 +162,33 @@
 
     <div class="divider"></div>
 
+    <!-- Sahibinden -->
     <a class="link" href="https://armaxgayrimenkul.sahibinden.com/" target="_blank">
       <div class="link-left">
         <div class="icon sahibinden">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Sahibinden.com_logo.svg" alt="Sahibinden">
+          <img src="images/sahibinden.png" alt="Sahibinden">
         </div>
         <strong>Sahibinden</strong>
       </div>
       <div class="arrow">→</div>
     </a>
 
+    <!-- Hepsi Emlak -->
     <a class="link" href="https://www.hepsiemlak.com/emlak-ofisi/armax-gayrimenkul-45672" target="_blank">
       <div class="link-left">
         <div class="icon hepsi">
-          <img src="https://seeklogo.com/images/H/hepsiemlak-logo-3E7E6E6D9A-seeklogo.com.png" alt="Hepsi Emlak">
+          <img src="images/hepsiemlak.png" alt="Hepsi Emlak">
         </div>
         <strong>Hepsi Emlak</strong>
       </div>
       <div class="arrow">→</div>
     </a>
 
+    <!-- Emlakjet -->
     <a class="link" href="https://www.emlakjet.com/emlak-ofisleri-detay/armax-gayrimenkul-183377" target="_blank">
       <div class="link-left">
         <div class="icon emlakjet">
-          <img src="https://seeklogo.com/images/E/emlakjet-logo-0C5F6A4A5B-seeklogo.com.png" alt="Emlakjet">
+          <img src="images/emlakjet.png" alt="Emlakjet">
         </div>
         <strong>Emlak Jet</strong>
       </div>
@@ -192,10 +197,11 @@
 
     <div class="section-title">Beni takip edin</div>
 
+    <!-- Instagram -->
     <a class="link" href="https://www.instagram.com/armaxgayrimenkul.gop/" target="_blank">
       <div class="link-left">
         <div class="icon instagram">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+          <img src="images/instagram.png" alt="Instagram">
         </div>
         <div>
           <strong>Instagram</strong><br>
@@ -204,6 +210,7 @@
       </div>
       <div class="arrow">→</div>
     </a>
+
   </div>
 
 </body>
