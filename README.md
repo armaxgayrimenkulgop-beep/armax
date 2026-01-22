@@ -44,7 +44,7 @@
       bottom: -45px;
       transform: translateX(-50%);
       background: #ffffff;
-      padding: 22px 38px;
+      padding: 17px 33px;
       border-radius: 30px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
