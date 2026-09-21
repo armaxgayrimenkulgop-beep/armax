@@ -110,6 +110,11 @@ button{font:inherit}
 @media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.team-header{display:block}.team-header h3{font-size:24px}.team-grid{grid-template-columns:1fr}.team-card{padding:18px}}
 .office-photo{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:18px;display:block;} 
+
+.visitor-counter{display:inline-flex;align-items:center;gap:7px;margin-left:auto;padding:6px 9px;border:1px solid rgba(255,255,255,.14);border-radius:9px;background:rgba(255,255,255,.08);color:#d8edf8;font-size:8px;font-weight:800;white-space:nowrap}
+.visitor-counter .visitor-dot{width:6px;height:6px;border-radius:50%;background:#58b4ea;box-shadow:0 0 0 3px rgba(88,180,234,.12)}
+.visitor-counter .visitor-number{font-family:Manrope,sans-serif;font-size:10px;color:#fff}
+@media(max-width:620px){.visitor-counter{margin-top:8px;margin-left:0;padding:6px 8px}}
 </style>
 </head>
 <body>
@@ -223,9 +228,27 @@ button{font:inherit}
 <footer class="footer">
   <span>© 2026 <strong>ARMAX GAYRİMENKUL</strong></span>
   <span><a href="https://armaxgayrimenkul.sahibinden.com/" target="_blank" rel="noopener">Sahibinden</a> • <a href="https://www.hepsiemlak.com/emlak-ofisi/armax-gayrimenkul-45672" target="_blank" rel="noopener">Hepsi Emlak</a> • <a href="https://www.emlakjet.com/emlak-ofisleri-detay/armax-gayrimenkul-183377" target="_blank" rel="noopener">Emlakjet</a></span>
+  <div class="visitor-counter" aria-label="Benzersiz ziyaretçi sayısı">
+    <span class="visitor-dot"></span>
+    <span>ZİYARETÇİ</span>
+    <span class="visitor-number" id="visitorCount">—</span>
+  </div>
 </footer>
 </div>
 </div>
 
+
+<script>
+(function(){
+  const counter=document.getElementById("visitorCount");
+  if(!counter)return;
+  fetch("https://armax-ziyaretci.armaxgayrimenkul-gop.workers.dev/?t="+Date.now(),{cache:"no-store"})
+    .then(r=>r.json())
+    .then(d=>{
+      if(d.success) counter.textContent=Number(d.visitors).toLocaleString("tr-TR");
+    })
+    .catch(()=>{counter.textContent="—";});
+})();
+</script>
 </body>
 </html>
