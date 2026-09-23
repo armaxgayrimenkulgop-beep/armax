@@ -225,14 +225,17 @@
 .hero-main-logo .logo-a-mark{width:.95em!important;height:1.10em!important}
 @media(max-width:620px){.hero-top-logo .logo-wordmark{font-size:31px!important}.hero-main-logo .logo-wordmark{font-size:57px!important}.hero-main-logo .logo-a-mark{width:.94em!important;height:1.10em!important}}
 
-/* Exact reference logo treatment */
+/* Exact reference logo treatment — traced to the supplied ARMAX reference */
 .hero-logo-exact{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
 .armax-brand-svg{width:100%;height:100%;display:block;overflow:visible}
 .hero-top-logo{width:225px!important;height:72px!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;filter:none!important;color:#fff!important;text-shadow:0 4px 14px rgba(0,0,0,.24)}
 .hero-top-logo .hero-logo-exact{justify-content:flex-start}
 .hero-main-logo{width:min(430px,86vw)!important;height:auto!important;aspect-ratio:620/180!important;max-height:none!important;margin:0 auto 12px!important;display:block!important;filter:none!important;color:#fff!important;text-shadow:0 6px 18px rgba(0,0,0,.28)}
 .hero-main-logo .armax-brand-svg{filter:drop-shadow(0 5px 10px rgba(0,0,0,.18))}
-@media(max-width:620px){.hero-top-logo{width:210px!important;height:66px!important}.hero-main-logo{width:min(410px,88vw)!important;margin-bottom:10px!important}}
+@media(max-width:620px){
+  .hero-top-logo{width:210px!important;height:66px!important}
+  .hero-main-logo{width:min(410px,88vw)!important;margin-bottom:10px!important}
+}
 </style>
 </head>
 <body>
@@ -251,31 +254,69 @@
   <div class="hero-shade"></div>
   <div class="hero-topbar">
     <a class="hero-top-logo" href="#" aria-label="ARMAX Gayrimenkul ana sayfa"><div class="hero-logo-exact" aria-label="ARMAX Gayrimenkul"><svg class="armax-brand-svg" viewBox="0 0 620 180" role="img" aria-label="ARMAX Gayrimenkul" xmlns="http://www.w3.org/2000/svg">
-<g transform="translate(0 0)">
-  <path d="M76 6 151 144h-37l-38-72-39 72H0Z" fill="#fff"/>
-  <path d="M13 145c35-12 57-35 78-64 17-24 37-31 67-23-34 3-52 21-70 47-21 31-42 50-75 58Z" fill="#1598ef"/>
-  <g fill="#fff">
-    <rect x="82" y="78" width="9" height="9" rx="1.5"/><rect x="96" y="78" width="9" height="9" rx="1.5"/>
-    <rect x="82" y="91" width="9" height="9" rx="1.5"/><rect x="96" y="91" width="9" height="9" rx="1.5"/>
-  </g>
+<defs>
+  <linearGradient id="armaxBlue" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#0089ee"/>
+    <stop offset="0.55" stop-color="#00a8ff"/>
+    <stop offset="1" stop-color="#168fe8"/>
+  </linearGradient>
+  <linearGradient id="armaxBlueDeep" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#006dcc"/>
+    <stop offset="1" stop-color="#0089ee"/>
+  </linearGradient>
+</defs>
+
+<!-- Stylized A: two clean white legs with the center opening preserved -->
+<path fill="#fff" d="M6 151 L72 9 Q77 -2 84 9 L151 151 L116 151 L78 49 L41 151 Z"/>
+<!-- Blue ribbon starts at the left foot, rises in a strong curved sweep and crosses the A -->
+<path fill="url(#armaxBlueDeep)" d="M2 154 C28 138 43 113 62 91 C82 68 105 54 130 54 C151 54 169 60 188 68 C159 60 139 66 119 76 C94 89 79 107 61 127 C44 145 27 154 2 154 Z"/>
+<path fill="url(#armaxBlue)" d="M12 151 C34 134 48 110 68 88 C88 66 109 57 132 57 C151 57 169 62 187 68 C159 64 141 70 122 81 C98 94 83 112 65 132 C48 148 31 154 12 151 Z"/>
+
+<!-- Four window points, centered in the A opening -->
+<g fill="#fff">
+  <rect x="72" y="101" width="11" height="11" rx="1.5"/>
+  <rect x="88" y="101" width="11" height="11" rx="1.5"/>
+  <rect x="72" y="117" width="11" height="11" rx="1.5"/>
+  <rect x="88" y="117" width="11" height="11" rx="1.5"/>
 </g>
-<text x="145" y="119" fill="#fff" font-family="Montserrat,Manrope,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-2">RMAX</text>
-<text x="151" y="166" fill="#fff" font-family="Montserrat,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="10">GAYRİMENKUL</text>
+
+<!-- Wordmark -->
+<text x="147" y="121" fill="#fff" font-family="Montserrat,Manrope,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-2.5">RMAX</text>
+<text x="151" y="166" fill="#fff" font-family="Montserrat,Manrope,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="10.2">GAYRİMENKUL</text>
 </svg></div></a>
     <button class="hero-menu-btn" id="heroMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div class="hero-reference-inner">
     <div class="hero-main-logo" aria-label="ARMAX Gayrimenkul"><svg class="armax-brand-svg" viewBox="0 0 620 180" role="img" aria-label="ARMAX Gayrimenkul" xmlns="http://www.w3.org/2000/svg">
-<g transform="translate(0 0)">
-  <path d="M76 6 151 144h-37l-38-72-39 72H0Z" fill="#fff"/>
-  <path d="M13 145c35-12 57-35 78-64 17-24 37-31 67-23-34 3-52 21-70 47-21 31-42 50-75 58Z" fill="#1598ef"/>
-  <g fill="#fff">
-    <rect x="82" y="78" width="9" height="9" rx="1.5"/><rect x="96" y="78" width="9" height="9" rx="1.5"/>
-    <rect x="82" y="91" width="9" height="9" rx="1.5"/><rect x="96" y="91" width="9" height="9" rx="1.5"/>
-  </g>
+<defs>
+  <linearGradient id="armaxBlue" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#0089ee"/>
+    <stop offset="0.55" stop-color="#00a8ff"/>
+    <stop offset="1" stop-color="#168fe8"/>
+  </linearGradient>
+  <linearGradient id="armaxBlueDeep" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#006dcc"/>
+    <stop offset="1" stop-color="#0089ee"/>
+  </linearGradient>
+</defs>
+
+<!-- Stylized A: two clean white legs with the center opening preserved -->
+<path fill="#fff" d="M6 151 L72 9 Q77 -2 84 9 L151 151 L116 151 L78 49 L41 151 Z"/>
+<!-- Blue ribbon starts at the left foot, rises in a strong curved sweep and crosses the A -->
+<path fill="url(#armaxBlueDeep)" d="M2 154 C28 138 43 113 62 91 C82 68 105 54 130 54 C151 54 169 60 188 68 C159 60 139 66 119 76 C94 89 79 107 61 127 C44 145 27 154 2 154 Z"/>
+<path fill="url(#armaxBlue)" d="M12 151 C34 134 48 110 68 88 C88 66 109 57 132 57 C151 57 169 62 187 68 C159 64 141 70 122 81 C98 94 83 112 65 132 C48 148 31 154 12 151 Z"/>
+
+<!-- Four window points, centered in the A opening -->
+<g fill="#fff">
+  <rect x="72" y="101" width="11" height="11" rx="1.5"/>
+  <rect x="88" y="101" width="11" height="11" rx="1.5"/>
+  <rect x="72" y="117" width="11" height="11" rx="1.5"/>
+  <rect x="88" y="117" width="11" height="11" rx="1.5"/>
 </g>
-<text x="145" y="119" fill="#fff" font-family="Montserrat,Manrope,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-2">RMAX</text>
-<text x="151" y="166" fill="#fff" font-family="Montserrat,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="10">GAYRİMENKUL</text>
+
+<!-- Wordmark -->
+<text x="147" y="121" fill="#fff" font-family="Montserrat,Manrope,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-2.5">RMAX</text>
+<text x="151" y="166" fill="#fff" font-family="Montserrat,Manrope,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="10.2">GAYRİMENKUL</text>
 </svg></div>
     <h1>Gayrimenkulde doğru bağlantılar,<br><strong>doğru kararlar.</strong></h1>
     <div class="hero-reference-actions">
@@ -343,7 +384,7 @@
     <a class="quick-action map" href="https://www.google.com/maps/search/?api=1&query=Armax+Gayrimenkul+Ba%C4%9Flarba%C5%9F%C4%B1+Caddesi+No%3A115%2F119+Gaziosmanpa%C5%9Fa+%C4%B0stanbul" target="_blank" rel="noopener"><span class="quick-label">YOL TARİFİ</span><span class="quick-icon">⌖</span></a>
   </div>
   <button class="quick-main" id="quickMain" type="button" aria-label="Hızlı erişim" aria-expanded="false"><span class="quick-main-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v3a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2Z"/><path d="M20 13v3a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z"/><path d="M15 19h-3"/></svg></span><span class="quick-close">×</span></button>
-</div><footer class="footer"><span>© 2026 <strong>ARMAX GAYRİMENKUL</strong></span><div class="visitor-counter" aria-label="Benzersiz ziyaretçi sayısı"><span class="visitor-dot"></span><span>ZİYARETÇİ</span><span class="visitor-number" id="visitorCount">—</span></div><div class="footer-meta"><span>DESIGNER • <strong>MERT ÖZDIKMEN</strong></span><span>VERSION 2.0.21</span><span>© TÜM HAKLARI MERT ÖZDIKMEN'E AİTTİR</span></div></footer>
+</div><footer class="footer"><span>© 2026 <strong>ARMAX GAYRİMENKUL</strong></span><div class="visitor-counter" aria-label="Benzersiz ziyaretçi sayısı"><span class="visitor-dot"></span><span>ZİYARETÇİ</span><span class="visitor-number" id="visitorCount">—</span></div><div class="footer-meta"><span>DESIGNER • <strong>MERT ÖZDIKMEN</strong></span><span>VERSION 2.0.22</span><span>© TÜM HAKLARI MERT ÖZDIKMEN'E AİTTİR</span></div></footer>
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <button class="mobile-menu-close" id="mobileMenuClose" type="button" aria-label="Menüyü kapat">×</button>
   <a href="#hizli-erisim">İLANLAR</a>
