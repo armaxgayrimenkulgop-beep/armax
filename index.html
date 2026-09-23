@@ -69,13 +69,21 @@
   linear-gradient(180deg,rgba(2,18,35,.48) 0%,rgba(4,27,49,.66) 42%,rgba(2,16,31,.95) 100%);
   z-index:-2}
 .hero-premium:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,122,205,.18),transparent 38%,rgba(0,0,0,.22));z-index:-1;pointer-events:none}
-.hero-inner-premium{display:flex;justify-content:center;align-items:center;min-height:720px;padding:42px 24px 88px}
-.hero-copy-premium{width:min(760px,100%);text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero-inner-premium{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:36px;align-items:center;min-height:720px;padding:42px 54px 88px;max-width:1120px;margin:0 auto}
+.hero-copy-premium{width:100%;text-align:left;display:flex;flex-direction:column;align-items:flex-start}
+.hero-phone-wrap{display:flex;justify-content:center;align-items:center;min-height:500px}
+.hero-phone{position:relative;width:246px;height:500px;padding:10px;border-radius:38px;background:linear-gradient(145deg,#111d2a,#02080d);border:1px solid rgba(255,255,255,.38);box-shadow:0 30px 70px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.22);transform:rotate(3deg)}
+.hero-phone:before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:82px;height:18px;border-radius:20px;background:#02060a;z-index:3;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.hero-phone-screen{width:100%;height:100%;overflow:hidden;border-radius:30px;background:#092f51;position:relative}
+.hero-phone-screen img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.hero-phone-screen:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,32,55,.06) 0%,rgba(3,24,42,.10) 48%,rgba(2,15,28,.68) 100%);pointer-events:none}
+.hero-phone-brand{position:absolute;left:18px;right:18px;bottom:22px;z-index:2;padding:12px 10px;border:1px solid rgba(255,255,255,.26);border-radius:14px;background:rgba(3,24,42,.48);backdrop-filter:blur(10px);color:#fff;text-align:center;font-family:Manrope,sans-serif;font-size:10px;font-weight:800;letter-spacing:.12em;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.hero-phone-brand span{display:block;margin-top:5px;font-family:Inter,sans-serif;font-size:7px;letter-spacing:.18em;color:#cce8f7}
 .brand-premium{margin:0 0 20px;justify-content:center}
 .brand-logo-premium{width:min(410px,86vw);height:108px;justify-content:center;background:transparent;mix-blend-mode:darken;filter:contrast(1.08) saturate(1.08) drop-shadow(0 8px 18px rgba(0,0,0,.20));overflow:visible}
 .brand-logo-premium img{object-position:center center;mix-blend-mode:darken}
-.hero-eyebrow{justify-content:center;color:#d8effd;opacity:.9}
-.hero-copy-premium h1{max-width:760px;margin:14px auto 14px;font-size:clamp(42px,6.2vw,72px);line-height:.99;text-shadow:0 7px 26px rgba(0,0,0,.28)}
+.hero-eyebrow{justify-content:flex-start;color:#d8effd;opacity:.9}
+.hero-copy-premium h1{max-width:720px;margin:14px 0 14px;font-size:clamp(42px,6.2vw,72px);line-height:.99;text-shadow:0 7px 26px rgba(0,0,0,.28)}
 .hero-copy-premium h1 em{color:#7fd5ff}
 .hero-copy-premium>p{max-width:590px;color:#e0f0f8;font-size:13px;line-height:1.75;text-shadow:0 3px 12px rgba(0,0,0,.28)}
 .hero-actions-premium{width:min(520px,100%);display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
@@ -98,13 +106,19 @@
   .hero-shade{background:
     radial-gradient(circle at 50% 25%,rgba(26,147,226,.24),transparent 34%),
     linear-gradient(180deg,rgba(3,22,41,.42) 0%,rgba(4,29,51,.58) 40%,rgba(2,18,34,.96) 100%)}
-  .hero-inner-premium{min-height:735px;padding:30px 18px 94px}
+  .hero-inner-premium{grid-template-columns:1fr;min-height:900px;padding:30px 18px 94px}
+  .hero-copy-premium{align-items:center;text-align:center}
   .brand-premium{margin-bottom:13px}
   .brand-logo-premium{width:min(350px,90vw);height:84px}
-  .hero-eyebrow{font-size:8px;letter-spacing:.17em}
+  .hero-eyebrow{justify-content:center;font-size:8px;letter-spacing:.17em}
   .hero-copy-premium h1{font-size:40px;line-height:1.02;letter-spacing:-.035em;margin:12px auto 13px}
   .hero-copy-premium>p{font-size:12px;line-height:1.65;max-width:330px}
   .hero-actions-premium{grid-template-columns:1fr;gap:9px;margin-top:20px;width:min(350px,100%)}
+  .hero-phone-wrap{min-height:0;margin-top:8px}
+  .hero-phone{width:188px;height:382px;border-radius:31px;padding:8px}
+  .hero-phone-screen{border-radius:24px}
+  .hero-phone-brand{left:12px;right:12px;bottom:14px;padding:9px 7px;font-size:8px}
+  .hero-phone-brand span{font-size:6px;margin-top:3px}
   .hero-btn{min-height:52px;font-size:10px}
   .hero-trust{grid-template-columns:1fr 1px 1fr 1px 1fr;gap:5px;margin-top:24px;width:100%}
   .trust-icon{width:32px;height:32px;font-size:15px}
@@ -156,6 +170,14 @@
       </div>
       <a class="hero-scroll" href="#hizli-erisim" aria-label="Aşağı kaydır">⌄</a>
     </div>
+    <div class="hero-phone-wrap">
+      <div class="hero-phone" aria-hidden="true">
+        <div class="hero-phone-screen">
+          <img src="images/armax-ofis.jpeg" alt="">
+          <div class="hero-phone-brand">ARMAX GAYRİMENKUL<span>GAZİOSMANPAŞA</span></div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="hero-photo-credit">İstanbul şehir fotoğrafı: SegLig / Wikimedia Commons · CC BY 4.0</div>
   <div class="hero-curve" aria-hidden="true"></div>
@@ -190,7 +212,7 @@
     <a class="quick-action map" href="https://www.google.com/maps/search/?api=1&query=Armax+Gayrimenkul+Ba%C4%9Flarba%C5%9F%C4%B1+Caddesi+No%3A115%2F119+Gaziosmanpa%C5%9Fa+%C4%B0stanbul" target="_blank" rel="noopener"><span class="quick-label">YOL TARİFİ</span><span class="quick-icon">⌖</span></a>
   </div>
   <button class="quick-main" id="quickMain" type="button" aria-label="Hızlı erişim" aria-expanded="false"><span class="quick-main-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v3a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2Z"/><path d="M20 13v3a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z"/><path d="M15 19h-3"/></svg></span><span class="quick-close">×</span></button>
-</div><footer class="footer"><span>© 2026 <strong>ARMAX GAYRİMENKUL</strong></span><div class="visitor-counter" aria-label="Benzersiz ziyaretçi sayısı"><span class="visitor-dot"></span><span>ZİYARETÇİ</span><span class="visitor-number" id="visitorCount">—</span></div><div class="footer-meta"><span>DESIGNER • <strong>MERT ÖZDIKMEN</strong></span><span>VERSION 2.0.16</span><span>© TÜM HAKLARI MERT ÖZDIKMEN'E AİTTİR</span></div></footer>
+</div><footer class="footer"><span>© 2026 <strong>ARMAX GAYRİMENKUL</strong></span><div class="visitor-counter" aria-label="Benzersiz ziyaretçi sayısı"><span class="visitor-dot"></span><span>ZİYARETÇİ</span><span class="visitor-number" id="visitorCount">—</span></div><div class="footer-meta"><span>DESIGNER • <strong>MERT ÖZDIKMEN</strong></span><span>VERSION 2.0.17</span><span>© TÜM HAKLARI MERT ÖZDIKMEN'E AİTTİR</span></div></footer>
 </div></div>
 <script>(function(){const counter=document.getElementById("visitorCount");if(!counter)return;fetch("https://armax-ziyaretci.armaxgayrimenkul-gop.workers.dev/?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(d=>{if(d.success)counter.textContent=Number(d.visitors).toLocaleString("tr-TR")}).catch(()=>{counter.textContent="—"})})();</script>
 
