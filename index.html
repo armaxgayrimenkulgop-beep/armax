@@ -175,11 +175,23 @@
   const codes={tr:"TR",en:"EN",ar:"AR",ru:"RU"};
 
   function apply(lang){
+    // Her dil değişiminde önce orijinal Türkçe metinleri geri yükle.
+    // Böylece EN -> AR -> RU gibi geçişlerde sayfayı yenilemek gerekmez.
+    textNodes.forEach(node=>{
+      const currentText=node.nodeValue;
+      const currentKey=currentText.trim();
+      if(original[currentKey]!==undefined){
+        node.nodeValue=original[currentKey];
+      } else {
+        for(const [key,value] of Object.entries(original)){
+          if(value===currentText){ node.nodeValue=value; break; }
+        }
+      }
+    });
     textNodes.forEach(node=>{
       const raw=node.nodeValue, key=raw.trim();
       const translated=translations[lang]&&translations[lang][key];
       if(translated!==undefined) node.nodeValue=raw.replace(key,translated);
-      else if(lang==="tr" && original[key]!==undefined) node.nodeValue=original[key];
     });
     document.documentElement.lang=lang;
     document.documentElement.dir=lang==="ar"?"rtl":"ltr";
