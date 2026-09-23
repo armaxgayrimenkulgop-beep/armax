@@ -187,6 +187,33 @@
 .mobile-menu-close{position:absolute;right:20px;top:16px;width:44px;height:44px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:26px}
 .mobile-menu a{color:#fff;font-size:19px;font-weight:800;padding:16px 4px;border-bottom:1px solid rgba(255,255,255,.14)}
 @media(min-width:621px){.mobile-menu{inset:auto 24px 24px auto;width:320px;height:auto;max-height:70vh;border-radius:22px;padding:68px 22px 22px;box-shadow:0 25px 60px rgba(0,0,0,.3)}.mobile-menu-close{top:14px;right:14px}}
+
+/* Final mobile hero logo/layout fix */
+.hero-top-logo{width:154px!important;height:58px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:1px!important;filter:none!important;color:#fff!important;text-shadow:0 4px 12px rgba(0,0,0,.28)}
+.hero-top-logo img{display:none!important}
+.logo-wordmark{font-family:Manrope,Inter,sans-serif;font-size:31px;font-weight:800;line-height:.9;letter-spacing:.11em;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.3)}
+.logo-submark{font-family:Inter,sans-serif;font-size:7px;font-weight:800;line-height:1;letter-spacing:.36em;color:#fff;margin-left:3px;text-shadow:0 2px 8px rgba(0,0,0,.28)}
+.hero-main-logo{width:auto!important;max-width:92vw!important;height:auto!important;max-height:none!important;margin-bottom:15px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;filter:none!important;color:#fff!important;text-shadow:0 6px 18px rgba(0,0,0,.35)}
+.hero-main-logo .logo-wordmark{font-size:clamp(54px,16vw,82px);letter-spacing:.12em}
+.hero-main-logo .logo-submark{font-size:10px;letter-spacing:.46em;margin-left:5px}
+@media(max-width:620px){
+  .hero-reference{height:100svh;min-height:0!important}
+  .hero-reference-inner{height:100svh;min-height:0!important;padding:78px 15px 96px!important;justify-content:center!important}
+  .hero-top-logo{width:145px!important;height:50px!important}
+  .hero-main-logo{margin-bottom:10px!important}
+  .hero-main-logo .logo-wordmark{font-size:57px}
+  .hero-main-logo .logo-submark{font-size:8px}
+  .hero-reference h1{font-size:19px!important;line-height:1.3!important;margin:0 0 14px!important}
+  .hero-reference-actions{width:min(340px,100%)!important;gap:8px!important}
+  .hero-reference-btn{min-height:49px!important;font-size:12px!important}
+  .hero-reference-btn span{font-size:19px!important}
+  .hero-reference-trust{margin-top:18px!important;gap:2px!important}
+  .hero-reference-trust>i{height:42px!important}
+  .reference-icon{width:30px!important;height:30px!important;font-size:20px!important}
+  .hero-reference-trust strong{font-size:7px!important}
+  .hero-reference-scroll{font-size:26px!important;margin-top:10px!important}
+}
+
 </style>
 </head>
 <body>
@@ -204,11 +231,11 @@
   <div class="hero-photo"></div>
   <div class="hero-shade"></div>
   <div class="hero-topbar">
-    <a class="hero-top-logo" href="#" aria-label="ARMAX Gayrimenkul ana sayfa"><img src="images/armax-logo.png" alt="ARMAX Gayrimenkul"></a>
+    <a class="hero-top-logo" href="#" aria-label="ARMAX Gayrimenkul ana sayfa"><span class="logo-wordmark">ARMAX</span><span class="logo-submark">GAYRİMENKUL</span></a>
     <button class="hero-menu-btn" id="heroMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div class="hero-reference-inner">
-    <img class="hero-main-logo" src="images/armax-logo.png" alt="ARMAX Gayrimenkul">
+    <div class="hero-main-logo" aria-label="ARMAX Gayrimenkul"><span class="logo-wordmark">ARMAX</span><span class="logo-submark">GAYRİMENKUL</span></div>
     <h1>Gayrimenkulde doğru bağlantılar,<br><strong>doğru kararlar.</strong></h1>
     <div class="hero-reference-actions">
       <a class="hero-reference-btn hero-reference-call" href="tel:+905331622357"><span>☎</span> HEMEN ARA</a>
