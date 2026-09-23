@@ -209,32 +209,22 @@
     }
   };
 
-  const original = {};
   const textNodes = [];
+  const originalText = new Map();
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   let n;
   while(n=walker.nextNode()){
     const v=n.nodeValue.trim();
-    if(v){ original[v]=n.nodeValue; textNodes.push(n); }
+    if(v){ textNodes.push(n); originalText.set(n,n.nodeValue); }
   }
   const current = document.getElementById("languageCurrent");
   const menu = document.getElementById("languageMenu");
   const codes={tr:"TR",en:"EN",ar:"AR",ru:"RU"};
 
   function apply(lang){
-    // Her dil değişiminde önce orijinal Türkçe metinleri geri yükle.
-    // Böylece EN -> AR -> RU gibi geçişlerde sayfayı yenilemek gerekmez.
-    textNodes.forEach(node=>{
-      const currentText=node.nodeValue;
-      const currentKey=currentText.trim();
-      if(original[currentKey]!==undefined){
-        node.nodeValue=original[currentKey];
-      } else {
-        for(const [key,value] of Object.entries(original)){
-          if(value===currentText){ node.nodeValue=value; break; }
-        }
-      }
-    });
+    // Her dil değişiminde her metin düğümünü ilk hâline döndür.
+    // Böylece TR -> EN -> AR -> RU geçişleri yenileme gerektirmeden çalışır.
+    textNodes.forEach(node=>{ node.nodeValue=originalText.get(node); });
     textNodes.forEach(node=>{
       const raw=node.nodeValue, key=raw.trim();
       const translated=translations[lang]&&translations[lang][key];
