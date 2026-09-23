@@ -66,10 +66,10 @@
 <div class="language-switcher" id="languageSwitcher">
   <button class="language-current" id="languageCurrent" type="button" aria-label="Dil seçimi" onclick="document.getElementById('languageMenu').classList.toggle('open')"><span class="language-flag">🇹🇷</span><span class="language-code">TR</span> ▾</button>
   <div class="language-menu" id="languageMenu">
-    <button type="button" data-lang="tr"><span class="language-flag">🇹🇷</span> Türkçe</button>
-    <button type="button" data-lang="en"><span class="language-flag">🇬🇧</span> English</button>
-    <button type="button" data-lang="ar"><span class="language-flag">🇸🇦</span> العربية</button>
-    <button type="button" data-lang="ru"><span class="language-flag">🇷🇺</span> Русский</button>
+    <button type="button" data-lang="tr" onclick="window.setArmaxLanguage('tr')"><span class="language-flag">🇹🇷</span> Türkçe</button>
+    <button type="button" data-lang="en" onclick="window.setArmaxLanguage('en')"><span class="language-flag">🇬🇧</span> English</button>
+    <button type="button" data-lang="ar" onclick="window.setArmaxLanguage('ar')"><span class="language-flag">🇸🇦</span> العربية</button>
+    <button type="button" data-lang="ru" onclick="window.setArmaxLanguage('ru')"><span class="language-flag">🇷🇺</span> Русский</button>
   </div>
 </div>
 <div class="page"><div class="shell">
@@ -237,6 +237,7 @@
     localStorage.setItem("armaxLang",lang);
     menu.classList.remove("open");
   }
+  window.setArmaxLanguage = apply;
   menu.querySelectorAll("button[data-lang]").forEach(b=>b.addEventListener("click",()=>apply(b.dataset.lang)));
   document.addEventListener("click",e=>{if(!document.getElementById("languageSwitcher").contains(e.target))menu.classList.remove("open")});
   const saved=localStorage.getItem("armaxLang")||"tr";
